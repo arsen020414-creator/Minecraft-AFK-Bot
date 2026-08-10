@@ -9,7 +9,14 @@ const bot = mineflayer.createBot({
   version: false,
   viewDistance: config.botChunk
 });
-
+bot.on('spawn', () => {
+  // Ожидаем 1 секунду после прогрузки, чтобы плагин успел прислать запрос
+  setTimeout(() => {
+    // Бот пробует войти; если еще не зарегистрирован — регистрируется
+    bot.chat('/login SuperSecretPass123');
+    bot.chat('/register SuperSecretPass123 SuperSecretPass123');
+  }, 1000);
+});
 let movementPhase = 0;
 const STEP_INTERVAL = 1500;
 const STEP_SPEED    = 1;
