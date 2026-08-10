@@ -1,6 +1,6 @@
 {
-  "serverHost": "example.aternos.me",
-  "serverPort": 12345,
-  "botUsername": "MyBot",
+  "serverHost": "fasiomsmp.falix.gg",
+  "serverPort": 23568,
+  "botUsername": "fasiom_bot1",
   "botChunk": 1
 }
